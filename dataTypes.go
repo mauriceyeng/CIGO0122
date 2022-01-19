@@ -20,4 +20,5 @@ func main() {
 	// struct
 	//functional programming
 	//recent feature update of java- from java 11
+
 }
