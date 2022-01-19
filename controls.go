@@ -26,10 +26,17 @@ func main() {
 		fmt.Println("hey you are odd")
 	}
 
-	if x := 10; x%2 == 0 {
+	if x := 10; x%2 == 0 { //go can support multiple condition in single if
 		fmt.Println("hey you are even")
 
 	} else {
 		fmt.Println("hey you are odd")
 	}
 }
+
+/*switch case
+switch(data){
+case:
+
+}
+*/
