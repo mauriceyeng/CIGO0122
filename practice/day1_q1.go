@@ -33,6 +33,6 @@ func init(){
 		//generate random numbers
 		num:=r.Intn((end-start))+start
 	}
-		//to be continued
+		//to be continued...
 	}
 }
