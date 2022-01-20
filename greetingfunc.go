@@ -12,6 +12,15 @@ func greetings(name string) (string, error) {
 	return "hello," + name, nil
 }
 
+func add(num ...int) int {
+	sum := 0
+	for i := range num {
+		sum += i
+	}
+
+	return sum
+}
+
 func main() {
 	//fmt.Println(greetings("Maurice"))
 	greeting, err := greetings("Maurice Yeng")
@@ -20,4 +29,6 @@ func main() {
 	} else {
 		fmt.Println(greeting)
 	}
+	fmt.Println("the sum of 1,2,3,4,5 is ", add(1, 2, 3, 4, 5))
+	fmt.Println("the sum of 1,2,3,4,5,6 is ", add(1, 2, 3, 4, 5, 6))
 }
