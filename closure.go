@@ -11,12 +11,13 @@ func main() {
 	fmt.Println(number)
 
 	//store a function as a value to a variable
-	var getInt func(int) int
-	getInt = func(x int) int {
+	//var getInt func(int) int
+	//getInt = func(x int) int {
+	j := func(x int) int {
 		fmt.Println("In a function")
 		return 10 + x
-	}
-	j := getInt(77)
+	}(45)
+	//j := getInt(77)
 	fmt.Println(j)
 
 }
