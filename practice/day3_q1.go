@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 var isKnightSleep bool
 var isPrisonerSleep bool
 var isArcherSleep bool
@@ -25,4 +27,5 @@ func CanFreePrisoner() bool {
 
 func main() {
 	isArcherSleep, isPrisonerSleep, isKnightSleep, hasDog = true, true, true, true
+	fmt.Println("the result is: ", CanFastAttack(), CanFreePrisoner(), CanSignalPrisoner(), CanSpy())
 }
