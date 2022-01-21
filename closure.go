@@ -16,6 +16,7 @@ func main() {
 		fmt.Println("In a function")
 		return 10 + x
 	}
-	getInt(90)
+	j := getInt(77)
+	fmt.Println(j)
 
 }
