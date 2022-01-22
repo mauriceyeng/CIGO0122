@@ -2,6 +2,18 @@ package main
 
 import "fmt"
 
+func rec(num int) {
+	if num == 0 {
+		return
+	}
+	if num%2 == 0 {
+		fmt.Println(num + 1)
+		rec(num)
+	} else {
+		fmt.Println(num + 2)
+		rec(num)
+	}
+}
 func fibo(num int) int {
 	if num == 0 || num == 1 {
 		return num
@@ -17,4 +29,5 @@ func fibo(num int) int {
 }
 func main() {
 	fmt.Println(fibo(4))
+	fmt.Println(rec(3))
 }
