@@ -3,20 +3,18 @@ package main
 import "fmt"
 
 func fibo(num int) int {
-	if num == 0 {
-		return 0
+	if num == 0 || num == 1 {
+		return num
 	}
-	if num == 1 {
-		return 1
-	}
-	if num < 3 {
+
+	if num < 0 {
 		fmt.Println("invalid number!")
-		return 0
+		return -1
 	}
-	result := fibo(num-2) + fibo(num-1)
+	result := fibo(num-1) + fibo(num-2)
 	return result
 
 }
 func main() {
-	fibo(10)
+	fmt.Println(fibo(10))
 }
