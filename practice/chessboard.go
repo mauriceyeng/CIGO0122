@@ -3,7 +3,12 @@ package main
 var chessBoard [8][8]string
 
 func checkOccupied(rank int){
-	for index,value:=chessBoard[rank]
+	count:=0
+	for _, value:=chessBoard[rank]{
+		if value=="#"{
+			count++
+		}
+	}
 }
 
 func main() {
