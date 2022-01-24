@@ -2,7 +2,7 @@ package main
 
 var chessBoard [8][8]string
 
-func checkOccupied(rank int){
+func checkOccupied(rank int)int {
 	count:=0
 	for _, value:=chessBoard[rank]{
 		if value=="#"{
