@@ -13,6 +13,7 @@ type Iphone13 struct {
 	old    Iphone12
 }
 
+//another structure Iphone12
 type Iphone12 struct {
 	camera float32
 }
@@ -37,8 +38,16 @@ func main() {
 	fmt.Println(a)
 
 	// non empty instance: b
-	b := Iphone13{}
-	b.camera = 90
-	b.call("686868")
+	b := Iphone13{
+		camera: 16,
+		ram:    6,
+		rom:    64,
+		size:   1,
+		color:  "white",
+		old: Iphone12{
+			camera: 20,
+		},
+	}
+	fmt.Println(b)
 
 }
