@@ -18,18 +18,18 @@ func main() {
 	maxHeight = min(arr[0], arr[len(arr)-1])
 	waterCaptured := 0
 	for index, value := range arr {
-		if index > 0 && index < len(arr) {
-			heightLeft := arr[index-1]
-			heightRight := arr[index+1]
-			if heightLeft > maxHeight {
-				heightLeft = maxHeight
-
-			}
-			if heightRight > maxHeight {
-				heightRight = maxHeight
-
-			}
-			waterCaptured += volume(min(heightLeft, heightRight))
+		var waterHeight int
+		if value > maxHeight {
+			value = maxHeight
 		}
+		if index > 0 && index < len(arr)-1 {
+			if arr[index-1] > maxHeight && arr[index+1] > maxHeight {
+				waterHeight = min(arr[index-1], arr[index+1])
+			} else {
+				waterHeight = maxHeight - value
+			}
+		}
+
 	}
+	waterCaptured += volume(waterCaptured)
 }
