@@ -14,21 +14,26 @@ type Iphone13 struct {
 
 //method
 func (i Iphone13) call(number string) {
+	fmt.Println(i.camera)
 	fmt.Println("calling..." + number)
 }
 
 func main() {
 	//create instance of struct
 
-	//empty instance
+	//empty instance: a
 
 	a := Iphone13{}
 	a.camera = 12.4
 	a.color = "blue"
 	a.call("9774688165")
-	// non empty instance
 
+	//print data of instance a
 	fmt.Println(a)
+
+	// non empty instance: b
 	b := Iphone13{}
+	b.camera = 90
+	b.call("686868")
 
 }
