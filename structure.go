@@ -10,6 +10,11 @@ type Iphone13 struct {
 	rom    int
 	price  float32
 	size   float32
+	old    Iphone12
+}
+
+type Iphone12 struct {
+	camera float32
 }
 
 //method
