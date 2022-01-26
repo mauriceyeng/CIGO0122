@@ -13,6 +13,15 @@ type interface_name interface{
 }
 */
 
+type Integer int
+
+func (i Integer) print() {
+	fmt.Println(i)
+}
+func (i Integer) Calculate() int {
+	return int(i)
+}
+
 type SalaryCalculator interface {
 	Calculate() int
 }
@@ -69,6 +78,9 @@ func main() {
 
 	//method-3
 
+	j := Integer(1008)
+	j.print()
+
 	pj := PermanentJob{
 		basicPay: 10,
 	}
@@ -79,7 +91,8 @@ func main() {
 		basicPay: 1000,
 	}
 	//var sc SalaryCalculator
-	sc := []SalaryCalculator{pj, cj, fj}
+
+	sc := []SalaryCalculator{pj, cj, fj} //an array of types
 	totalIncome(sc)
 
 }
