@@ -14,9 +14,9 @@ func main() {
 
 	//another class
 	student_class2 := map[int]string{
-		1: "tony",
-		2: "ezeikel",
-		3: "killua",
+		69:  "tony",
+		420: "ezeikel",
+		707: "killua",
 	}
 
 	student_class[5] = "Vishnu"
@@ -44,4 +44,15 @@ func main() {
 		student_class[key] = value
 	}
 
+	//defining rows/columns
+	/*
+		R-row(user input)
+		C->col (user input)
+		arr:=make([][]int,R)
+
+		for i:=0;i<R;i++{
+			arr[i]=make([]int,C)
+		}
+		arr={{0,0,0,0},{0,0,0},{0,0,0,0}}
+	*/
 }
