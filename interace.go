@@ -28,6 +28,18 @@ type ContractJob struct {
 	basicPay int
 }
 
+func (c ContractJob) Calculate() int {
+	return c.basicPay
+}
+
+type FreelanceJob struct {
+	basicPay int
+}
+
+func (f FreelanceJob) Calculate() int {
+	return f.basicPay
+}
+
 // var salary SalaryCalculator
 // salary can hold the data of multiple data types which comes with certain conditions
 //salary should hold the values of types PermanentJob and ContractJob
@@ -45,10 +57,37 @@ func main() {
 		fmt.Println(total)
 	*/
 
-	var sc SalaryCalculator
-	sc = PermanentJob{
+	//method-2
+	/*
+		var sc SalaryCalculator
+		sc = PermanentJob{
+			basicPay: 10,
+		}
+		total := sc.Calculate()
+		fmt.Println(total)
+	*/
+
+	//method-3
+
+	pj := PermanentJob{
 		basicPay: 10,
 	}
-	total := sc.Calculate()
+	cj := ContractJob{
+		basicPay: 100,
+	}
+	fj := FreelanceJob{
+		basicPay: 1000,
+	}
+	//var sc SalaryCalculator
+	sc := []SalaryCalculator{pj, cj, fj}
+	totalIncome(sc)
+
+}
+
+func totalIncome(sc []SalaryCalculator) {
+	total := 0
+	for _, v := range sc {
+		total = total + v.Calculate()
+	}
 	fmt.Println(total)
 }
