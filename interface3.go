@@ -7,7 +7,7 @@ type SalaryCalculator interface {
 
 func describe(i interface{}) {
 	fmt.Printf("Type= %T,value=%v\n", i, i)
-	switch i.(type) {
+	switch i.type {
 	case string:
 		fmt.Println("heyy i am string and i will do")
 	case bool:
