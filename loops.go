@@ -16,6 +16,7 @@ func main() {
 		fmt.Println("infinite execution")
 
 	}*/
+
 	//dowhile
 	i := 0
 	for {
