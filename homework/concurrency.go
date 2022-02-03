@@ -2,20 +2,22 @@ package main
 
 import (
 	"fmt"
-	"sync"
+	"time"
 )
 
 func main() {
-	var mutex sync.Mutex
+	//var mutex sync.Mutex
 	counter := 0
-	for i := 0; i < 10; i++ {
-		go func() {
-			mutex.Lock()
+	for i := 1; i <= 10; i++ {
+		go func(i int) {
+			//mutex.Lock()
 			counter++
-			mutex.Unlock()
+			fmt.Println(i, "=>", counter)
+			//mutex.Unlock()
 
-		}()
-		fmt.Println(counter)
+		}(i)
+
 	}
 	//fmt.Println(counter)
+	time.Sleep(time.Second * 3)
 }
