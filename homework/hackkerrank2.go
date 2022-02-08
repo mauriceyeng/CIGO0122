@@ -7,9 +7,9 @@ import (
 
 func RunLengthEncode(input string) string {
 	var count int
-	a := strings.Count(input)
+	a:=len(input)
 	for i := 0; i < a; i++ {
-
+		if 
 	}
 
 }
