@@ -18,11 +18,15 @@ func main() {
 	time.Sleep(time.Second * 3)
 
 }
+
+// with error statement
 func doSomething(ctx context.Context) {
 	for {
 		select {
 		case <-ctx.Done():
 			fmt.Println("timeout")
+			err := ctx.Err()
+			fmt.Println(err)
 			return
 		default:
 			fmt.Println("Doing something bakwaas")
