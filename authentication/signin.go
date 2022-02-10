@@ -4,9 +4,7 @@
 // Response schema: Token{unique string} for authentication
 
 /*
-QUERY:
+QUERY and PARAMS
 	https://localhost:8080/book/11		- params
 	https://localhost:8080/book?id=11	- query
-
-
 */
